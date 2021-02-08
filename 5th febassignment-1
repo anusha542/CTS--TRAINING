@@ -1,0 +1,79 @@
+
+
+
+-----WAP to add three numbers
+---
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+
+        int x = 10;
+        int y = 20;
+       int z = 40;
+        Console.WriteLine("Sum of x and y and z is " + (x + y + z));
+    }
+}
+  ----WAP to multiple 3 numbers---
+using System;
+
+class program
+{
+    static void Main()
+    {
+        
+
+        int x = 10;
+        int y = 20;
+       int z = 40;
+        Console.WriteLine("Multiple of x and y and z is " + (x * y * z));
+    }
+}
+///What is System in the program. What is Console? What are Write, WriteLine
+  
+In C#, to print the data on the console output screen the following method are used – Console.Write() and Console.WriteLine() method. Console is a predefined class of System namespace.
+ 
+While Write() and WriteLine() both are the Console Class methods.
+
+The only difference between the Write() and WriteLine() is that Console.Write is used to print data without printing the new line, while Console.WriteLine  is used to print data along with printing the new line.
+
+using System;
+
+
+
+-------Is it mandatory to have a class in the project----
+
+It is impossible to create a class without having a namespace . But in asp.net we can create a class without having a namespace , in this case asp.net compiler will add a namespace called global under which the classes will be added 
+
+ -----WAP to declare string and integer variables to hold id, name , address , salary  
+Display it in ------
+
+class program
+{
+    static void Main()
+    {
+
+
+        int ID;
+        int Salary;
+        string Address;
+        Console.WriteLine("Enter ID");
+        ID = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Your ID is " + ID);
+        Console.WriteLine("Enter Salary");
+        Salary = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Your Salary is " + Salary);
+        Console.WriteLine("Enter Address");
+        Address = Console.ReadLine();
+        Console.WriteLine("Your Address is " + Address);
+
+        
+    }
+}
+  
+  
+  
+ 
