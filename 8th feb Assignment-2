@@ -1,0 +1,201 @@
+------Print sum and average of elements of an Array-------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class matrix
+    {
+        static void Main()
+        {
+            int[] num = new int[] { 1, 2, 3, 4, 5 };
+            int sum = 0;
+            
+        float avg;
+        Console.WriteLine("Enter Numbers");
+            for (int i = 0; i < num.Length; i++)
+            {
+                
+                sum += num[i];
+            }
+
+               avg = (float) sum / 10;
+            Console.WriteLine("Sum is " + sum);
+            Console.WriteLine("Average is " + avg);
+        }
+    }
+    
+}
+-----------WAP to display sum of 3 by 3 matrices------
+namespace firstproject
+{
+    class two
+    {
+        static void Main()
+        {
+            int i, j;
+            int[,] arr1 = new int[3, 3];
+            int[,] arr2 = new int[3, 3];
+            int[,] arr3 = new int[3, 3];
+            Console.WriteLine("Enter First Matrix Numbers");
+            for (i = 0; i < 3; i++)
+            {
+                for (j = 0; j < 3; j++)
+                {
+                    arr1[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+
+            }
+            Console.WriteLine("Enter Second Matrix Numbers");
+            for (i = 0; i < 3; i++)
+            {
+                for (j = 0; j < 3; j++)
+                {
+                    arr2[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+
+            }
+            Console.WriteLine("First Matrix");
+            for (i = 0; i < 3; i++)
+            {
+                Console.Write("\n");
+                for (j = 0; j < 3; j++)
+                    Console.Write("{0}\t", arr1[i, j]);
+
+
+            }
+            Console.WriteLine("Second Matrix");
+            for (i = 0; i < 3; i++)
+            {
+                Console.Write("\n");
+                for (j = 0; j < 3; j++)
+                {
+                    Console.Write("{0}\t", arr2[i, j]);
+
+                }
+
+            }
+            for (i = 0; i < 3; i++)
+                for (j = 0; j < 3; j++)
+                    arr3[i, j] = arr1[i, j] + arr2[i, j];
+            Console.Write("\nAdding two matrices: \n");
+            for (i = 0; i < 3; i++)
+            {
+                Console.Write("\n");
+                for (j = 0; j < 3; j++)
+                    Console.Write("{0}\t", arr3[i, j]);
+            }
+
+        }
+    }
+}
+
+-----------WAP to find the maximum element of an integer Array----
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class max
+    {
+        static void Main()
+            {
+            int[] num = new int[10];
+            int max = num[0];
+           Console.WriteLine("Enter Numbers");
+            for (int i = 0; i < 10; i++)
+            {
+                num[i] = Convert.ToInt16(Console.ReadLine());
+                if(num[i]>max)
+                {
+                    max = num[i];
+                }
+            }
+            Console.Write("Maximum element is : {0}\n", max);
+        }
+    }
+}
+------------WAP to print column wise sum of elements of 2 D Array----
+
+namespace firstproject
+{
+    class adding
+    {
+        static void Main()
+        {
+            int sumCol;
+            int[,] num = new int[ ,] {
+            
+                { 1,2,3},
+            { 1,2,3},
+            { 1,2,3}
+            };
+
+
+
+
+            
+            Console.WriteLine("Numbers are");
+            for (int i = 0; i < 3; i++)
+            {
+                sumCol = 0;
+                for (int j = 0; j < 3; j++)
+                {
+                    sumCol = sumCol + num[j, i];
+                }
+
+                Console.WriteLine("Sum of " + (i + 1) + " column: " + sumCol);
+            }
+            
+        }
+    }
+
+}
+----------WAP to print row wise sum of elements of 2 D Array-----
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class row
+    {
+        static void Main()
+        {
+            int sumrow;
+            int[,] num = new int[,] {
+
+                { 1,2,3},
+            { 1,2,3},
+            { 1,2,3}
+            };
+
+
+
+
+
+            Console.WriteLine("Numbers are");
+            for (int i = 0; i < 3; i++)
+            {
+                sumrow = 0;
+                for (int j = 0; j < 3; j++)
+                {
+                    sumrow = sumrow + num[i, j];
+                }
+
+                Console.WriteLine("Sum of " + (i + 1) + " row: " + sumrow);
+            }
+
+        }
+    }
+}
+

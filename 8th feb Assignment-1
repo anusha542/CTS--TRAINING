@@ -1,0 +1,124 @@
+---Same program with different methods , take input from user and make it conditional
+----1. using if else
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class sum1
+    {
+        static void Add(int x, int y)
+        {
+            Console.WriteLine("Result of sum is " + (x + y));
+        }
+
+        static void Subtract(int x, int y)
+        {
+            Console.WriteLine("Result of subtraction is " + (x - y));
+        }
+
+        static void Product(int x, int y)
+        {
+            Console.WriteLine("Result of product is " + (x * y));
+        }
+
+        static void Divide(int x, int y)
+        {
+            Console.WriteLine("Result of division is " + (x / y));
+        }
+        static void Main()
+        {
+            int choice;
+            Console.WriteLine("Select the options below to perform operations on numbers:");
+            Console.WriteLine("1. Add two numbers");
+            Console.WriteLine("2. Subtract two numbers");
+            Console.WriteLine("3. Multipy two numbers");
+            Console.WriteLine("4. Divide two numbers");
+            Console.WriteLine("Enter your choice below:");
+            choice = Convert.ToInt32(Console.ReadLine());
+            if (choice == 1)
+                Add(10, 20);
+            else if (choice == 2)
+                Subtract(10, 20);
+            else if (choice == 3)
+                Product(10, 20);
+            else if (choice == 4)
+                Divide(20, 10);
+            else
+                Console.WriteLine("Invalid Choice");
+        }
+    }
+
+}
+
+------------using switch--
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class cls
+
+    { 
+        static void Add(int x, int y)
+    {
+        Console.WriteLine("Result of sum is " + (x + y));
+    }
+
+    static void Subtract(int x, int y)
+    {
+        Console.WriteLine("Result of subtraction is " + (x - y));
+    }
+
+    static void Product(int x, int y)
+    {
+        Console.WriteLine("Result of product is " + (x * y));
+    }
+
+    static void Divide(int x, int y)
+    {
+        Console.WriteLine("Result of division is " + (x / y));
+    }
+    static void Main()
+    {
+        int choice;
+        Console.WriteLine("Select the options below to perform operations on numbers:");
+        Console.WriteLine("1. Add two numbers");
+        Console.WriteLine("2. Subtract two numbers");
+        Console.WriteLine("3. Multipy two numbers");
+        Console.WriteLine("4. Divide two numbers");
+        Console.WriteLine("Enter your choice below:");
+        choice = Convert.ToInt32(Console.ReadLine());
+        switch (choice)
+        {
+            case 1:
+                Add(10, 20);
+                break;
+            case 2:
+                Subtract(10, 20);
+                break;
+            case 3:
+                Product(10, 20);
+                break;
+            case 4:
+                Divide(20, 10);
+                break;
+            default:
+                Console.WriteLine("Invalid Choice");
+                break;
+        }
+    }
+}
+    }
+
+
+
+	
+
