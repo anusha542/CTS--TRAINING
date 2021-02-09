@@ -1,0 +1,133 @@
+--------Write a program in C# Sharp to count a total number of duplicate elements in an array---
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class dupili
+    {
+        static void Main()
+        {
+            int[] num = new int[10];
+            int count = 0;
+            Console.WriteLine("Enter 10 numbers:");
+            for (int i = 0; i < num.Length; i++)
+            {
+                num[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            for (int i = 0; i < num.Length; i++)
+            {
+                for (int j = i + 1; j < num.Length; j++)
+                {
+                    if (num[i] == num[j])
+                    {
+                        count++;
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine("The total number of duplicate elements in the array is " + count);
+        }
+    }
+}
+
+-------MARKS----
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class phy
+    {
+        static void Main()
+        {
+
+            int maths, phy, chem, total3, totalmp;
+            Console.Write("Input the marks obtained in Physics :");
+            phy = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the marks obtained in Chemistry :");
+            chem = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the marks obtained in Mathematics :");
+            maths = Convert.ToInt32(Console.ReadLine());
+            total3 = maths + phy + chem;
+            totalmp = maths + phy;
+            if ((maths >= 65) && (phy >= 55) && (chem >= 50))
+            {
+                if ((total3 >= 180) || (totalmp >= 140))
+                    Console.WriteLine("\nThe candidate is eligible for admission.");
+            }
+            else
+                Console.WriteLine("The candidate is not eligible for admission.");
+        }
+    }
+}
+
+
+
+------------- ELECRICITY BILL--------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class bill
+    {
+        static void Main()
+        {
+            string ID, Name;
+            double units, charges = 0, surchage = 0, net_amt;
+            Console.Write("Customer IDNO :");
+            ID = Console.ReadLine();
+            Console.Write("Customer Name :");
+            Name = Console.ReadLine();
+            Console.Write("unit Consumed :");
+            units = Convert.ToDouble(Console.ReadLine());
+
+            if (units <= 199)
+            {
+                charges = units * 1.20;
+                Console.WriteLine("\nAmount Charges @Rs. 1.20 per unit : {0:N2}", charges);
+            }
+            else if (units >= 200 && units <= 400)
+            {
+                charges = units * 1.50;
+                Console.WriteLine("Amount Charges @Rs. 1.50 per unit : {0:N2}", charges);
+            }
+            else if (units >= 400 && units <= 600)
+            {
+                charges = units * 1.80;
+                Console.WriteLine("Amount Charges @Rs. 1.80 per unit : {0:N2}", charges);
+            }
+            else if (units >= 600)
+            {
+                charges = units * 2.00;
+                Console.WriteLine("Amount Charges @Rs. 2.00 per unit : {0:N2}", charges);
+            }
+
+            if (charges > 400)
+            {
+                surchage = ((15 * charges) / 100);
+            }
+
+            Console.WriteLine("Surchage amount : {0:N2}", surchage);
+
+            net_amt = charges + surchage;
+
+            if (net_amt < 100)
+                net_amt = 100;
+            Console.WriteLine("Net Amount Paid By the Customer : {0:N2}", net_amt);
+        }
+    }
+}
+
