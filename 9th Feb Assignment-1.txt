@@ -1,0 +1,118 @@
+------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstproject
+{
+    class Employee
+    {
+
+
+        int Empid;
+        string name;
+        string dept;
+        string manager;
+        int Basicsalary;
+        int exp;
+        double HRA, DA, PF, NetSalary;
+        public void GetEmpolyeeDetails()
+        {
+            Console.Write(" Enter the Enpolyeeid");
+            Empid = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the name");
+            name = Console.ReadLine();
+            Console.Write(" Enter the Department");
+            dept = Console.ReadLine();
+            Console.Write(" Enter the Manager");
+            manager = Console.ReadLine();
+            Console.Write(" Enter the Basic salary");
+            Basicsalary = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the experince");
+            exp = Convert.ToInt32(Console.ReadLine());
+        }
+        public void CalculateNetsalary()
+        {
+            if (exp > 10)
+            {
+                DA = ((10 * Basicsalary) / 100);
+                HRA = ((8.5 * Basicsalary) / 100);
+                PF = 6200;
+
+
+            }
+            if (exp > 7 && exp < 10)
+            {
+                DA = ((7 * Basicsalary) / 100);
+                HRA = ((6.5 * Basicsalary) / 100);
+                PF = 4100;
+
+            }
+            if (exp > 5 && exp < 7)
+            {
+                DA = ((4.1 * Basicsalary) / 100);
+                HRA = ((3.8 * Basicsalary) / 100);
+                PF = 1800;
+
+
+            }
+            if (exp < 5)
+            {
+                DA = ((1.9 * Basicsalary) / 100);
+                HRA = ((2.0 * Basicsalary) / 100);
+                PF = 1200;
+
+            }
+            NetSalary = DA + HRA + PF;
+        }
+        public void DisplayEmpolyeeDetails()
+        {
+            Console.WriteLine("Employee ID : " + Empid);
+            Console.WriteLine("Employee Name : " + name);
+            Console.WriteLine("Basic Salary is" + Basicsalary);
+            Console.WriteLine("DA is" + DA);
+            Console.WriteLine("HRA is" + HRA);
+            Console.WriteLine("PF is" + PF);
+            Console.WriteLine("Net salary is" + NetSalary);
+        }
+
+    }
+    class assclasses
+    {
+        static void Main()
+        {
+            Employee[] employee = new Employee[10];
+            for (int i = 0; i < 5; i++)
+            {
+                employee[i] = new Employee();
+                employee[i].GetEmpolyeeDetails();
+                employee[i].CalculateNetsalary();
+                employee[i].DisplayEmpolyeeDetails();
+            }
+
+        }
+
+    }
+}
+//using generic
+ List<Employee> list = new List<Employee>();
+            Employee employee1 = new Employee();
+            list.Add(employee1);
+            Employee employee2 = new Employee();
+            list.Add(employee2);
+            Employee employee3 = new Employee();
+            list.Add(employee3);
+            Employee employee4 = new Employee();
+            list.Add(employee4);
+            Employee employee5 = new Employee();
+            list.Add(employee5);
+
+            foreach (Employee emp in list)
+            {
+                employee1.GetEmployeeDetails();
+                emp.CalculateNetsalary();
+                emp.DisplayEmployeeDetails();
+            }
